@@ -6,10 +6,11 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:34:50 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/14 16:50:37 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/15 15:39:36 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)

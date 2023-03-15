@@ -6,11 +6,14 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 18:39:46 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/13 18:40:04 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/15 15:38:15 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, unsigned int len)
+#include <stdlib.h>
+#include "libft.h"
+
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
 	const char		*s;
 	unsigned char	*d;

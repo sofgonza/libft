@@ -6,11 +6,14 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 12:20:43 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/13 12:26:33 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/15 15:33:33 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *b, int c, unsigned int len)
+#include <stdlib.h>
+#include "libft.h"
+
+void	*ft_memset(void *b, int c, size_t len)
 {
 	char			*dst;
 	unsigned int	x;

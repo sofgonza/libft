@@ -6,11 +6,14 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:40:53 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/14 17:20:16 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/15 15:43:52 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+#include <stdlib.h>
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
 

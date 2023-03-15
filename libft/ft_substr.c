@@ -6,8 +6,9 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 15:16:55 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/15 15:16:57 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/15 15:30:21 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+char *ft_substr(char const *s, unsigned int start,
+size_t len)

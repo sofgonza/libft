@@ -6,11 +6,14 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 18:27:06 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/13 15:39:12 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/15 15:37:40 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, unsigned int n)
+#include <stdlib.h>
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	const char		*s;
 	char			*d;

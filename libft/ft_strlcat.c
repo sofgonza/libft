@@ -6,29 +6,22 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 12:49:01 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/07 12:49:57 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/15 15:41:02 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_len(char *str)
-{
-	int	i;
+#include <stdlib.h>
+#include "libft.h"
 
-	i = 0;
-	while (str[i])
-		++i;
-	return (i);
-}
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, char *src, size_t size)
 {
 	unsigned int	dl;
 	unsigned int	sl;
 	unsigned int	x;
 	unsigned int	i;
 
-	dl = ft_len(dest);
-	sl = ft_len(src);
+	dl = ft_strlen(dest);
+	sl = ft_strlen(src);
 	i = 0;
 	x = 0;
 	if (size <= dl)

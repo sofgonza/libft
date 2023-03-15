@@ -6,9 +6,12 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 12:17:56 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/13 12:24:11 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/15 15:32:42 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
+#include "libft.h"
 
 int	ft_strlen(const char *s)
 {

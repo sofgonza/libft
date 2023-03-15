@@ -6,9 +6,12 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 19:02:50 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/13 19:45:41 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/15 15:38:41 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

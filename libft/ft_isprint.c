@@ -6,9 +6,12 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 12:10:08 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/13 12:23:20 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/15 15:32:25 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
