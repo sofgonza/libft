@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 20:07:55 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/14 16:18:15 by sofgonza         ###   ########.fr       */
+/*   Created: 2023/03/15 13:16:53 by sofgonza          #+#    #+#             */
+/*   Updated: 2023/03/15 15:00:53 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	int	x;
+	char			**mem;
 
-	x = 0;
-	while (s[x])
+	mem = malloc (count * size);
+	if (mem != NULL)
 	{
-		if (s[x] == (char)c)
-			return ((char *)&s[x]);
-		++x;
+		ft_bzero(mem, (size * count));
+		return (mem);
 	}
-	if ((char)c == '\0')
-		return ((char *)&s[x]);
 	return (NULL);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%s\n", ft_strchr("teste", 1024));
-	return (0);
-}
-*/

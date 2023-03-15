@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 20:07:55 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/14 16:18:15 by sofgonza         ###   ########.fr       */
+/*   Created: 2023/03/14 17:28:27 by sofgonza          #+#    #+#             */
+/*   Updated: 2023/03/14 23:32:16 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strnstr(const char *haystack, const char *needle, unsigned int len)
 {
-	int	x;
+	unsigned int	i;
+	unsigned int	x;
+	unsigned int	n;
 
 	x = 0;
-	while (s[x])
+	n = ft_strlen(needle);
+	if (n == 0)
+		return ((char *)haystack);
+	while (x < len && haystack[x] != '\0')
 	{
-		if (s[x] == (char)c)
-			return ((char *)&s[x]);
-		++x;
+		i = 0;
+		while (haystack[x + i] == needle[i] && x + i < len && needle[i] != '\0')
+			i++;
+		if (i == n)
+			return ((char *)haystack + x);
+		x++;
 	}
-	if ((char)c == '\0')
-		return ((char *)&s[x]);
 	return (NULL);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%s\n", ft_strchr("teste", 1024));
-	return (0);
-}
-*/
