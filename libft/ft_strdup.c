@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:45:52 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/15 15:11:00 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/15 18:23:33 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char	*p;
+	char	*dup;
 	int		len;
 	int		x;
 
 	len = ft_strlen(s1);
-	p = malloc (sizeof (const char) * (len + 1));
+	dup = malloc (sizeof (const char) * (len + 1));
 	x = 0;
-	if (p != NULL)
+	if (dup != NULL)
 	{
 		while (x <= len)
 		{
-			p[x] = s1[x];
+			dup[x] = s1[x];
 			++x;
 		}
-		return (p);
+		return (dup);
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 16:09:53 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/15 15:46:28 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:56:17 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,10 @@ char			*ft_strnstr(const char *haystack, const char *needle,
 int				ft_atoi(const char *str);
 void			*ft_calloc(size_t count, size_t size);
 char			*ft_strdup(const char *s1);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *s1, char const *set);
+char			*ft_itoa(int n);
+static int		digit_c(int n);
 
 #endif
