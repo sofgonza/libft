@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 15:16:55 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/20 12:52:29 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/21 17:31:48 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	x;
 	size_t	slen;
 
+	if (!s)
+		return (NULL);
 	sub = NULL;
 	x = 0;
 	slen = ft_strlen(s);

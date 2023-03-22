@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/16 14:43:43 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/22 15:43:39 by sofgonza         ###   ########.fr       */
+/*   Created: 2023/03/21 16:48:31 by sofgonza          #+#    #+#             */
+/*   Updated: 2023/03/21 17:35:08 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int		x;
-	int		len;
+	unsigned int	i;
 
-	if (!s1 || !set)
-		return (NULL);
-	x = 0;
-	len = ft_strlen(s1);
-	while (ft_strchr(set, s1[x]) != NULL && s1[x])
-		++x;
-	while (ft_strchr(set, s1[len - 1]) != NULL && (len - 1))
-		len--;
-	len = len - x;
-	return (ft_substr(s1, x, len));
+	i = 0;
+	if (s)
+	{
+		while (s[i])
+		{
+			(*f)(i, &s[i]);
+			++i;
+		}
+	}
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	printf("%s\n",ft_strtrim("ababababbbaabababbababba", "ab"));
-	return (0);
-}*/

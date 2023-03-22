@@ -6,21 +6,21 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 13:01:50 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/21 14:57:06 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/21 16:47:07 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static int	digit_count(int)
+int	digit_count(int n)
 {
 	int	len;
 
 	len = 0;
 	if (n <= 0)
 		++len;
-	while(n && ++len)
+	while (n && ++len)
 		n = n / 10;
 	return (len);
 }
