@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 15:16:55 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/21 17:31:48 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/22 17:05:26 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub = NULL;
 	x = 0;
 	slen = ft_strlen(s);
-	if (len == 0 || slen == 0)
-		return (ft_strdup(""));
-	if (start >= slen)
+	if (len == 0 || slen == 0 || start >= slen)
 		return (ft_strdup(""));
 	if (len > slen - start)
 		len = slen - start;
 	sub = (char *)malloc(sizeof(char) * (len + 1));
 	if (sub == NULL)
 		return (NULL);
-	while (x < len && start < slen)
+	while (x < len && (start + x) < slen)
 	{
-		sub[x] = s[start];
+		sub[x] = s[start + x];
 		++x;
-		++start;
 	}
 	sub[x] = '\0';
 	return (sub);
