@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/08 12:24:27 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/27 12:31:48 by sofgonza         ###   ########.fr       */
+/*   Created: 2023/03/28 14:50:47 by sofgonza          #+#    #+#             */
+/*   Updated: 2023/03/28 16:07:10 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	char			*dst;
-	unsigned int	x;
+	t_list	*last;
 
-	dst = s;
-	x = 0;
-	while (x < n)
+	if (*lst)
 	{
-		dst[x] = '\0';
-		++x;
+		last = ft_lstlast(*lst);
+		last->next = new;
 	}
+	else
+		*lst = new;
 }
-/*
-#include <stdio.h>
-
-int main(void)
-{
-	char	src[] = "3422224";
-    ft_bzero(src, 3);
-	printf("%s", src);
-	return (0);
-}
-*/

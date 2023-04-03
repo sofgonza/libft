@@ -6,13 +6,13 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 13:00:31 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/24 16:32:53 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/27 13:14:21 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	w_count(char const *s, char c)
+static unsigned int	w_count(char const *s, char c)
 {
 	unsigned int	wc;
 	unsigned int	i;
@@ -29,7 +29,7 @@ unsigned int	w_count(char const *s, char c)
 	return (wc);
 }
 
-int	w_len(char const *s, char c, unsigned int i)
+static int	w_len(char const *s, char c, unsigned int i)
 {
 	unsigned int	len;
 
@@ -42,7 +42,7 @@ int	w_len(char const *s, char c, unsigned int i)
 	return (len);
 }
 
-void	strfree(char **str)
+static void	str_free(char **str)
 {
 	unsigned int	j;
 
@@ -55,7 +55,7 @@ void	strfree(char **str)
 	free (str);
 }
 
-char	**ft_split_b(char const *s, char c, char **str)
+static char	**ft_place(char const *s, char c, char **str)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -68,7 +68,10 @@ char	**ft_split_b(char const *s, char c, char **str)
 		{
 			str[j] = ft_substr(s, i, (w_len(s, c, i)));
 			if (str[j] == NULL)
-				strfree(str);
+			{
+				str_free(str);
+				return (NULL);
+			}
 			j++;
 			i = i + (w_len(s, c, i));
 		}
@@ -88,7 +91,7 @@ char	**ft_split(char const *s, char c)
 	str = ft_calloc (w_count(s, c) + 1, sizeof(char *));
 	if (!str)
 		return (NULL);
-	return (ft_split_b(s, c, str));
+	return (ft_place(s, c, str));
 }
 /*int	main(void)
 {

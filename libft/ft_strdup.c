@@ -6,11 +6,10 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:45:52 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/15 18:23:33 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/27 12:33:48 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)

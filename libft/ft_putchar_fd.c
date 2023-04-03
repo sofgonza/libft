@@ -6,14 +6,19 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 16:01:18 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/22 16:11:06 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/31 15:47:45 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write (fd, &c, 1);
+	write(fd, &c, 1);
 }
+/*
+int	main(void)
+{
+	ft_putchar_fd('a', 1);
+	return (0);
+}*/

@@ -1,38 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/08 12:24:27 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/27 12:31:48 by sofgonza         ###   ########.fr       */
+/*   Created: 2023/03/28 16:10:23 by sofgonza          #+#    #+#             */
+/*   Updated: 2023/03/29 01:09:39 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	char			*dst;
-	unsigned int	x;
-
-	dst = s;
-	x = 0;
-	while (x < n)
+	while (lst)
 	{
-		dst[x] = '\0';
-		++x;
+		(*f)(lst->content);
+		lst = lst->next;
 	}
 }
-/*
-#include <stdio.h>
-
-int main(void)
-{
-	char	src[] = "3422224";
-    ft_bzero(src, 3);
-	printf("%s", src);
-	return (0);
-}
-*/

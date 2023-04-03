@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/08 12:24:27 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/27 12:31:48 by sofgonza         ###   ########.fr       */
+/*   Created: 2023/03/28 15:43:22 by sofgonza          #+#    #+#             */
+/*   Updated: 2023/03/28 16:07:59 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	char			*dst;
-	unsigned int	x;
+	t_list	*temp;
 
-	dst = s;
-	x = 0;
-	while (x < n)
+	if (!del || !lst || !*lst)
+		return ;
+	while (*lst)
 	{
-		dst[x] = '\0';
-		++x;
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = temp;
 	}
+	*lst = NULL;
 }
-/*
-#include <stdio.h>
-
-int main(void)
-{
-	char	src[] = "3422224";
-    ft_bzero(src, 3);
-	printf("%s", src);
-	return (0);
-}
-*/

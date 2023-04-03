@@ -6,14 +6,13 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 13:01:50 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/21 16:47:07 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/27 12:30:38 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-int	digit_count(int n)
+static int	digit_count(int n)
 {
 	int	len;
 

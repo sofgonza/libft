@@ -6,11 +6,10 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 12:25:14 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/16 13:00:20 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/27 12:35:00 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 unsigned int	ft_strlcpy(char *dest, char *src, size_t size)

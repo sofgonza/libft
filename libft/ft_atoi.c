@@ -6,11 +6,10 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 12:42:18 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/15 15:45:38 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/30 16:11:40 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 int	ft_atoi(const char *str)

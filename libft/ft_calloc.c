@@ -6,11 +6,10 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:16:53 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/15 15:00:53 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/03/30 16:15:26 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
@@ -25,3 +24,13 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (NULL);
 }
+/*
+int	main(void)
+{
+	size_t	count;
+	size_t	size;
+
+	count = 20;
+	size = sizeof(char *);
+	ft_calloc(count, size);
+}*/
