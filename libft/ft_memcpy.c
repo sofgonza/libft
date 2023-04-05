@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 18:27:06 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/27 12:31:13 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/03 18:07:26 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	src[] = "3422224";
+	char	dst[] = "hola";
+    ft_memcpy(dst, src, 3);
+	printf("%s", dst);
+	return (0);
+}*/

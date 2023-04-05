@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 18:39:46 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/27 12:31:58 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 10:21:26 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,12 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 		d[len] = s[len];
 	return (dest);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	src[] = "342";
+	char	dst[] = "holanvjerv";
+	printf("%s", ft_memcpy(dst, src, 6));
+	return (0);
+}*/

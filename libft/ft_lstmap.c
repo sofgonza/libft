@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 16:26:32 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/04/03 17:29:56 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/03 17:57:34 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new;
 	void	*a;
 
-	if (!f || !del)
+	if (!f || !del || !lst)
 		return (NULL);
 	first = NULL;
 	while (lst)
