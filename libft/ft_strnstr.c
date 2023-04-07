@@ -6,11 +6,10 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 17:28:27 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/21 17:27:25 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 16:41:10 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
@@ -34,3 +33,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	const char	s1[] = "hola como estas";
+	const char	s2[] = "como";
+	printf("haystack = %s\nneedle = %s\n%s", s1, s2, ft_strnstr(s1, s2, 20));
+	return (0);
+}*/

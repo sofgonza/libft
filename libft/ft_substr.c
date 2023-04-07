@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 15:16:55 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/27 15:22:22 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 17:03:59 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[x] = '\0';
 	return (sub);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	const char	s1[] = "hola a";
+	printf("s1=%s\ndifference=%s\n", s1, ft_substr(s1, 0, 6));
+	return (0);
+}*/

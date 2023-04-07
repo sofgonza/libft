@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 12:49:01 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/27 12:34:45 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 15:02:47 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,14 @@ unsigned int	ft_strlcat(char *dest, char *src, size_t size)
 	}
 	return (sl + dl);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	dest[11] = "ansld";
+	char	src[] = "holga";
+	size_t	dsize = ft_strlen(dest);
+	size_t	ssize = ft_strlen(src);
+	printf("%d\n%s\n", ft_strlcat(dest, src, (ssize + dsize)), dest);
+	return (0);
+}*/

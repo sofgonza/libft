@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:45:52 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/27 12:33:48 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 16:45:03 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,11 @@ char	*ft_strdup(const char *s1)
 	}
 	return (NULL);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	const char	str[] = "testers";
+	printf("original str = %s\nduplicated str = %s\n", str, ft_strdup(str));
+	return (0);
+}*/

@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 16:25:43 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/27 12:32:36 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 17:23:33 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,9 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + 48, fd);
 }
+/*
+int	main(void)
+{
+	ft_putnbr_fd(-2147483648, 1);
+	return (0);
+}*/

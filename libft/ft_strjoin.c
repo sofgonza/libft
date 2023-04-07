@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 16:57:33 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/29 12:09:17 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 17:13:42 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (NULL);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	printf("%s", ft_strjoin("hola como va ", "todo bien"));
+	return (0);
+}*/

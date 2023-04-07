@@ -6,11 +6,10 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 19:46:35 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/15 15:38:53 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 15:17:45 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 int	ft_tolower(int c)
@@ -22,3 +21,11 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	a = 'A';
+	printf("%d=%c\n%d=%c", a, a, ft_tolower((int)a), ft_tolower((int)a));
+	return (0);
+}*/

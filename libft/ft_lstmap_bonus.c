@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 16:26:32 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/04/03 17:57:34 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/07 18:38:55 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	first = NULL;
 	while (lst)
 	{
-		a = ((*f)(lst->content));
+		a = (*f)(lst->content);
 		new = ft_lstnew(a);
-		if (!new || !a)
+		if (!new)
 		{
 			ft_lstclear(&first, del);
+			free(a);
 			return (NULL);
 		}
 		ft_lstadd_back(&first, new);
@@ -37,12 +38,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 }
 /*
 #include <stdio.h>
-char *ft_noseque(char *a)
+void	*ft_noseque(void *a)
 {
-	char *b;
+	void *b;
 
 	b = ft_strdup(a);
-	return (b);
+	return ((void *)b);
 }
 
 void ft_nothing(void *a)
@@ -70,5 +71,6 @@ int	main(void)
 
 	new = ft_lstmap(head, &ft_noseque, &ft_nothing);
 	//printlist(new);
-
- }*/
+	system("leaks a.out");
+ }
+*/

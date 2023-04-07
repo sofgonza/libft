@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 16:10:22 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/27 12:32:50 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 17:21:08 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,10 @@ void	ft_putstr_fd(char *s, int fd)
 		write(fd, s, len);
 	}
 }
+/*
+int	main(void)
+{
+	ft_putstr_fd("hola como va", 1);
+	return (0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:48:15 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/30 16:25:42 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 16:14:22 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	printf("%s\n", ft_memchr("teste", 'e', 4));
+	return (0);
+}*/

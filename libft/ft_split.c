@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 13:00:31 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/27 13:14:21 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/06 21:32:53 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,10 +93,19 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (ft_place(s, c, str));
 }
-/*int	main(void)
+/*
+#include <stdio.h>
+int	main(void)
 {
 	char *str = "lorem isus. Suspendisse";
 	char c = ' ';
-	ft_split(str, c);
+	int	i = 0;
+	char **s = ft_split(str, c);
+	while (s[i])
+	{
+		printf("str[%d]=%s\n", i, s[i]);
+		i++;
+	}
+	printf("str[%d]=%s\n", i, s[i]);
 	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 17:16:42 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/29 12:05:23 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 16:35:21 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (str1[i] - str2[i]);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	const char	s1[] = "hola a";
+	const char	s2[] = "hola c";
+	printf("s1=%s\ns2=%s\ndifference=%d", s1, s2, ft_memcmp(s1, s2, 6));
+	return (0);
+}*/

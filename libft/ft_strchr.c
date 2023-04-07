@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:07:55 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/27 19:16:18 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 15:19:51 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,8 @@ char	*ft_strchr(const char *s, int c)
 }
 /*
 #include <stdio.h>
-
 int	main(void)
 {
-	printf("%s\n", ft_strchr("teste", 1024));
+	printf("%s\n", ft_strchr("teste", 's'));
 	return (0);
-}
-*/
+}*/

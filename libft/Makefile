@@ -6,7 +6,7 @@
 #    By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/13 10:49:36 by sofgonza          #+#    #+#              #
-#    Updated: 2023/03/29 00:37:31 by sofgonza         ###   ########.fr        #
+#    Updated: 2023/04/06 20:50:00 by sofgonza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,18 @@ CC = gcc
 CCFLAGS = -Wall -Werror -Wextra
 
 NAME = libft.a
-SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strlcpy.c ft_strlcat.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+SRC = \
+	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
+	ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_toupper.c \
+	ft_tolower.c ft_strchr.c ft_strrchr.c ft_strlcpy.c ft_strlcat.c \
+	ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c \
+	ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
+	ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
+	ft_putnbr_fd.c
+BONUS = \
+	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+	ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+	ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 B_OBJS = $(BONUS:.c=.o)
 OBJS = $(SRC:.c=.o)
 
@@ -27,13 +37,15 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(LIB) $(NAME) $(OBJS)
 
+bonus: $(OBJS) $(B_OBJS)
+	$(LIB) $(NAME) $(OBJS) $(B_OBJS)
+
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(B_OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
 
-bonus: $(OBJS) $(B_OBJS)
-	$(LIB) $(NAME) $(OBJS) $(B_OBJS)
-
 re: clean all
+
+.PHONY: all bonus clean fclean re

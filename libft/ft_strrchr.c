@@ -6,11 +6,10 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:34:50 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/03/15 15:39:36 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 15:22:38 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
@@ -28,3 +27,10 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)&s[len]);
 	return (0);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	printf("%s\n", ft_strrchr("teste", 'e'));
+	return (0);
+}*/

@@ -6,7 +6,7 @@
 /*   By: sofgonza <sofgonza@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 12:20:43 by sofgonza          #+#    #+#             */
-/*   Updated: 2023/04/03 18:03:03 by sofgonza         ###   ########.fr       */
+/*   Updated: 2023/04/05 12:26:40 by sofgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ void	*ft_memset(void *b, int c, size_t len)
 int main(void)
 {
 	char	src[] = "3422224";
-    ft_memset(src, 38, 3);
-	printf("%s", src);
+	printf("%s", ft_memset(src, 38, 3));
 	return (0);
 }
 */
